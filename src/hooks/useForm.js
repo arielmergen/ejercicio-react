@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export const useForm = (initialState) => {
     const [values, setValues] = useState(initialState);
-    const { minMount, maxMount, minTerm, maxTerm } = initialState;
 
     const handleCleanInput = (e) => {
         e.target.setSelectionRange(0, 0);

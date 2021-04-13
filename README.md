@@ -36,8 +36,8 @@ src/
 2. `yarn` o `npm install` para instalar paquetes npm
 3. `yarn start` o `npm start` para inicializar server de desarrollo
    ...
-   ###RESULTADO FINAL DESKTOP
-   Este es el resulatdo final en desktop
-   ![UI](/ejercicio-final.jpg?raw=true)
+    ### RESULTADO FINAL DESKTOP
+    Este es el resulatdo final en desktop
+    ![UI](/ejercicio-final.jpg?raw=true)
 
 El resultado en mobile falta refinar el css
