@@ -38,6 +38,6 @@ src/
    ...
    ###RESULTADO FINAL DESKTOP
    Este es el resulatdo final en desktop
-   ![UI](/ejercicio-final.png?raw=true)
+   ![UI](/ejercicio-final.jpg?raw=true)
 
 El resultado en mobile falta refinar el css
