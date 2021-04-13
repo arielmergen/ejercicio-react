@@ -18,8 +18,8 @@ export const SimuladorDetail = ({ term = 0, mount = 0 }) => {
             {term > 0 && (
                 <>
                     <h1>Detalle de cuotas</h1>
-                    {renderList(term, mount).map((item) => (
-                        <div className="row m-0">
+                    {renderList(term, mount).map((item, index) => (
+                        <div className="row m-0" key={index}>
                             <div className="column">
                                 <span className="slider-label">Cuota: {item.term}</span>
                             </div>
