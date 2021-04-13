@@ -1,38 +1,300 @@
-.App {
-  text-align: center;
+html,
+body {
+    min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: "Montserrat", sans-serif;
+    background: rgb(5, 81, 148);
+    background: -moz-linear-gradient(180deg, rgba(5, 81, 148, 1) 0%, rgba(7, 33, 70, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(5, 81, 148, 1) 0%, rgba(7, 33, 70, 1) 100%);
+    background: linear-gradient(180deg, rgba(5, 81, 148, 1) 0%, rgba(7, 33, 70, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#055194",endColorstr="#072146",GradientType=1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    background-color: #072146;
+    color: #fff;
+    height: auto;
+    margin: 70px;
+    padding: 20px 40px 70px 40px;
+    width: 500px;
+}
+.bg-gradient-container {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#003b67+0,084f83+100&0.74+48,0+89 */
+    background: rgb(5, 81, 148);
+    background: -moz-linear-gradient(180deg, rgba(5, 81, 148, 1) 0%, rgba(7, 33, 70, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(5, 81, 148, 1) 0%, rgba(7, 33, 70, 0) 100%);
+    background: linear-gradient(180deg, rgba(5, 81, 148, 1) 0%, rgba(7, 33, 70, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#055194",endColorstr="#072146",GradientType=1);
+}
+h1 {
+    font-size: 2em;
+    margin: 15px 0;
+}
+h1.lighter {
+    font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-center {
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.text-left {
+    text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.column.--half {
+    width: 50%;
+}
+
+.double-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
+}
+
+input.form-control {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.4em;
+    color: #fff;
+    width: 100%;
+    font-weight: 700;
+}
+
+input.form-control::placeholder {
+    color: #ffffff;
+}
+
+input.form-control:focus {
+    outline: none;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.form-control span {
+    padding: 0 4px 0 10px;
+}
+
+.mount-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #ffffff;
+    padding: 2px 25px;
+    max-width: 35%;
+}
+.mount-control-items {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+.end {
+    justify-content: flex-end;
+}
+/*BTN*/
+.btn {
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    background-color: #ffffff;
+    padding: 15px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(110%);
+}
+
+.btn-group {
+    display: flex;
+}
+
+.btn-primary {
+    background-color: #004481;
+}
+.btn-secondary {
+    background-color: #028484;
+}
+
+.btn-primary-light {
+    background-color: #0b548b;
+}
+
+.btn-70 {
+    flex: 0 1 70%;
+}
+
+.btn-30 {
+    flex: 0 1 30%;
+}
+.btn-size-big {
+    font-size: 1.3em;
+}
+
+/*BACKGROUND*/
+
+.background-primary {
+    background-color: #003b67;
+}
+.background-primary-light {
+    background-color: #003b67;
+}
+.background-secondary {
+    background-color: #17aa8d;
+}
+
+.p-2 {
+    padding: 20px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+
+.cuota-fija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.too-big {
+    font-size: 2.4em;
+}
+.middle-big {
+    font-size: 1em;
+}
+
+/*SLIDER CSS*/
+
+.slider {
+    width: 90%;
+    align-self: center;
+}
+.slider-label {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.rc-slider-dot {
+    display: none;
+}
+
+/*AUX*/
+
+.m-0 {
+    margin: 0px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.mb-15 {
+    margin-top: 15px;
+}
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.mt-4 {
+    margin-top: 40px;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .colum {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+    }
+    .column.--half {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .mount-control {
+        width: 100%;
+        max-width: 100%;
+        padding: 0px;
+        text-align: center;
+    }
+
+    input.form-control {
+        background-color: transparent;
+        border: 0;
+        font-size: 1.4em;
+        color: #fff;
+        width: 25%;
+        font-weight: 700;
+    }
+
+    .cuota-fija {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-70 {
+        flex: 0 0 100%;
+    }
+    .btn-30.ml-10 {
+        margin-left: 0px;
+    }
 }
