@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { SimuladorFields } from "./SimuladorFields";
 import { SimuladorDetail } from "./SimuladorDetail";
 
 import { useForm } from "./../hooks/useForm";
-import { useCalc } from "./../hooks/useCalc";
-
+import { calcTotalMount } from "./../hooks/useCalc";
 import { numberWithCommas } from "./../utils/utils";
 
 export const SimuladorApp = () => {
@@ -22,21 +21,11 @@ export const SimuladorApp = () => {
 
     const [stateDetails, setDetails] = useState(false);
 
-    const { mount, term } = formValues;
-
-    const [stateCalc, calcTotalMount] = useCalc(mount, term, initialState);
-
-    const { totalmount } = stateCalc;
-
-    useEffect(() => {
-        if (mount !== "" && term !== "") {
-            calcTotalMount();
-        }
-    }, [mount, term]);
+    const { mount, term, totalmount } = formValues;
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        calcTotalMount();
+        calcTotalMount(mount, term);
     };
 
     const handleDetails = (e) => {

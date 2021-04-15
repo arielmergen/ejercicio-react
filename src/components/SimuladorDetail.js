@@ -1,6 +1,5 @@
 import React from "react";
 import { numberWithCommas } from "./../utils/utils";
-let i = 1;
 
 export const SimuladorDetail = ({ term = 0, mount = 0 }) => {
     const renderList = (term) => {
