@@ -26,9 +26,9 @@ export const SimuladorFields = ({ formValues, handleCleanInput, handleInputChang
 
     return (
         <>
-            <div className="row mb-0">
-                <label className="column --half">MONTO TOTAL</label>
-                <div className="column --half">
+            <div className="row">
+                <label className="column">MONTO TOTAL</label>
+                <div className="column">
                     <div className="row m-0  end">
                         <div className="mount-control">
                             <span className="mount-control-items">$</span>
@@ -48,31 +48,31 @@ export const SimuladorFields = ({ formValues, handleCleanInput, handleInputChang
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="row mt-0 slider">
-                <div className="column --half">
-                    <Slider
-                        railStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
-                        trackStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
-                        handleStyle={{
-                            borderColor: "white",
-                            height: 16,
-                            width: 16,
-                            backgroundColor: "white",
-                        }}
-                        dotStyle={{ borderColor: "white" }}
-                        activeDotStyle={{ borderColor: "white" }}
-                        value={mount}
-                        min={3000}
-                        max={50000}
-                        marks={marks}
-                        step={1000}
-                    />
+                <div className="row slider">
+                    <div className="column">
+                        <Slider
+                            railStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
+                            trackStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
+                            handleStyle={{
+                                borderColor: "white",
+                                height: 16,
+                                width: 16,
+                                backgroundColor: "white",
+                            }}
+                            dotStyle={{ borderColor: "white" }}
+                            activeDotStyle={{ borderColor: "white" }}
+                            value={mount}
+                            min={3000}
+                            max={50000}
+                            marks={marks}
+                            step={1000}
+                        />
+                    </div>
                 </div>
             </div>
-            <div className="row mt-5">
-                <label className="column --half">Plazo</label>
-                <div className="column --half">
+            <div className="row">
+                <label className="column">Plazo</label>
+                <div className="column">
                     <div className="row m-0 end">
                         <div className="mount-control">
                             <input
@@ -91,7 +91,7 @@ export const SimuladorFields = ({ formValues, handleCleanInput, handleInputChang
                     </div>
                 </div>
                 <div className="row slider">
-                    <div className="column --half">
+                    <div className="column">
                         <Slider
                             railStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
                             trackStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}

@@ -5,7 +5,7 @@ export const SimuladorDetail = ({ term = 0, mount = 0 }) => {
     const renderList = (term) => {
         let array = new Array(parseInt(term));
         let obj = [];
-        for (let i = 0; i <= array.length; i++) {
+        for (let i = 1; i <= array.length; i++) {
             obj[i] = { term: i, mount: mount };
         }
 
@@ -15,19 +15,15 @@ export const SimuladorDetail = ({ term = 0, mount = 0 }) => {
     return (
         <>
             {term > 0 && (
-                <>
-                    <h1>Detalle de cuotas</h1>
+                <div class="details">
+                    <h1 className="text-center">Detalle de cuotas</h1>
                     {renderList(term, mount).map((item, index) => (
-                        <div className="row m-0" key={index}>
-                            <div className="column">
-                                <span className="slider-label">Cuota: {item.term}</span>
-                            </div>
-                            <div className="column end">
-                                <span className="slider-label">Monto: {numberWithCommas(item.mount)}</span>
-                            </div>
+                        <div className="row" key={index}>
+                            <span className="slider-label">Cuota: {item.term}</span>
+                            <span className="slider-label">$ {numberWithCommas(item.mount)}</span>
                         </div>
                     ))}
-                </>
+                </div>
             )}
         </>
     );

@@ -1,6 +1,6 @@
 html,
 body {
-    min-height: 100vh;
+    min-height: 100%;
     padding: 0px;
     margin: 0px;
 }
@@ -53,12 +53,6 @@ h1.lighter {
     text-transform: uppercase;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .row {
     display: flex;
     flex-direction: row;
@@ -68,23 +62,12 @@ h1.lighter {
     align-items: center;
     width: 100%;
 }
-
 .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
+    flex: 1 1 50%;
 }
 
-.column.--half {
-    width: 50%;
-}
-
-.double-column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 2;
+.form {
+    padding: 10px;
 }
 
 input.form-control {
@@ -207,6 +190,20 @@ label {
     font-size: 1em;
 }
 
+/*Details Term*/
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.details .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
 /*SLIDER CSS*/
 
 .slider {
@@ -250,23 +247,25 @@ label {
 @media (max-width: 768px) {
     .container {
         width: 100%;
+        height: auto;
         margin: 0px;
         padding: 0px;
     }
     .row {
-        flex-direction: column;
-        align-items: stretch;
+        text-align: center;
+        margin: 20px 0;
     }
-    .colum {
+    .column {
         display: flex;
         flex-direction: column;
-        flex: 0 0 100%;
+        flex: 1 1 100%;
     }
-    .column.--half {
-        width: 100%;
-        text-align: center;
-        margin: 10px 0;
+
+    .details {
+        width: 94%;
+        padding: 10px;
     }
+
     .mount-control {
         width: 100%;
         max-width: 100%;
@@ -282,7 +281,10 @@ label {
         width: 25%;
         font-weight: 700;
     }
-
+    .slider {
+        width: 80%;
+        align-self: center;
+    }
     .cuota-fija {
         display: flex;
         flex-direction: column;
