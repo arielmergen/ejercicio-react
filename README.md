@@ -42,6 +42,10 @@ Si bien el ejercicio no plantea realizarlo me parecio interesante agregarlo
 
 ...
 
+### URL DEMO
+
+url: https://priceless-hermann-2d54aa.netlify.app/
+
 ### RESULTADO FINAL DESKTOP
 
 Este es el resulatdo final en desktop
