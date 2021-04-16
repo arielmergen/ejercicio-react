@@ -54,9 +54,9 @@ Este es el resulatdo final en desktop
 ### RESULTADO FINAL MOBILE
 
 Este es el resulatdo final en mobile
-![UI](/ejercicio-final-mobile.jpg?raw=true)
+![UI](/ejercicio-final-mobile-final.jpg?raw=true)
 
 ### RESULTADO FINAL MOBILE Detalle Cuota
 
 Este es el resulatdo final en mobile
-![UI](/ejercicio-final-mobile-detalle-cuota.jpg?raw=true)
+![UI](/ejercicio-final-mobile-detalle-cuota-final.jpg?raw=true)

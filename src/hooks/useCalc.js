@@ -13,19 +13,3 @@ export const calcTotalMount = (mount = 0, term = 0) => {
         return calc(prepareToClac(mount), prepareToClac(term));
     }
 };
-
-// export const useCalc = (mount, term, initialState) => {
-//     const [state, setState] = useState(initialState);
-
-//     const calcTotalMount = () => {
-//         if (!isNaN(mount) && mount !== "") {
-//             let result = calc(prepareToClac(mount), prepareToClac(term));
-//             setState({
-//                 ...state,
-//                 totalmount: result,
-//             });
-//         }
-//     };
-
-//     return [state, calcTotalMount];
-// };

@@ -57,7 +57,7 @@ export const SimuladorApp = () => {
                         <div className="cuota-fija background-primary">
                             <span className="text-bold middle-big text-uppercase">Cuota fija por mes</span>
                             <span className="text-bold too-big">
-                                $ {totalmount !== "" ? numberWithCommas(totalmount) : numberWithCommas(1666)}
+                                $ {totalmount !== "" ? numberWithCommas(totalmount) : numberWithCommas(0)}
                             </span>
                         </div>
                         <div className="btn-group">
