@@ -4,7 +4,14 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import NumberFormat from "react-number-format";
 
-export const SimuladorFields = ({ formValues, handleCleanInput, handleInputChangeMount, handleInputChangeTerm }) => {
+export const SimuladorFields = ({
+    formValues,
+    handleCleanInput,
+    handleInputChangeMount,
+    handleSliderChangeMount,
+    handleInputChangeTerm,
+    handleSliderChangeTerm,
+}) => {
     const { mount, term } = formValues;
     const marks = {
         3000: {
@@ -23,6 +30,38 @@ export const SimuladorFields = ({ formValues, handleCleanInput, handleInputChang
             label: <span className="slider-label">24</span>,
         },
     };
+
+    let sliderMountProps = {
+        railStyle: { backgroundColor: "white", height: 6, borderRadius: 0 },
+        trackStyle: { backgroundColor: "white", height: 6, borderRadius: 0 },
+        handleStyle: { borderColor: "white", height: 16, width: 16, backgroundColor: "white" },
+        dotStyle: { borderColor: "white" },
+        activeDotStyle: { borderColor: "white" },
+        onChange: handleSliderChangeMount,
+        min: 3000,
+        max: 50000,
+        marks: marks,
+        step: 1000,
+    };
+
+    let sliderTermProps = {
+        railStyle: { backgroundColor: "white", height: 6, borderRadius: 0 },
+        trackStyle: { backgroundColor: "white", height: 6, borderRadius: 0 },
+        handleStyle: { borderColor: "white", height: 16, width: 16, backgroundColor: "white" },
+        onChange: handleSliderChangeTerm,
+        min: 3,
+        max: 24,
+        marks: marksTerm,
+        step: 1,
+    };
+
+    if (mount !== "") {
+        sliderMountProps.value = mount;
+    }
+
+    if (term !== "") {
+        sliderTermProps.value = term;
+    }
 
     return (
         <>
@@ -50,23 +89,7 @@ export const SimuladorFields = ({ formValues, handleCleanInput, handleInputChang
                 </div>
                 <div className="row slider">
                     <div className="column">
-                        <Slider
-                            railStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
-                            trackStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
-                            handleStyle={{
-                                borderColor: "white",
-                                height: 16,
-                                width: 16,
-                                backgroundColor: "white",
-                            }}
-                            dotStyle={{ borderColor: "white" }}
-                            activeDotStyle={{ borderColor: "white" }}
-                            value={mount}
-                            min={3000}
-                            max={50000}
-                            marks={marks}
-                            step={1000}
-                        />
+                        <Slider {...sliderMountProps} />
                     </div>
                 </div>
             </div>
@@ -92,21 +115,7 @@ export const SimuladorFields = ({ formValues, handleCleanInput, handleInputChang
                 </div>
                 <div className="row slider">
                     <div className="column">
-                        <Slider
-                            railStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
-                            trackStyle={{ backgroundColor: "white", height: 6, borderRadius: 0 }}
-                            handleStyle={{
-                                borderColor: "white",
-                                height: 16,
-                                width: 16,
-                                backgroundColor: "white",
-                            }}
-                            value={term}
-                            min={3}
-                            max={24}
-                            marks={marksTerm}
-                            step={1}
-                        />
+                        <Slider {...sliderTermProps} />
                     </div>
                 </div>
             </div>

@@ -17,7 +17,14 @@ export const SimuladorApp = () => {
         minterm: 3,
         maxTerm: 24,
     };
-    const [formValues, handleCleanInput, handleInputChangeMount, handleInputChangeTerm] = useForm(initialState);
+    const [
+        formValues,
+        handleCleanInput,
+        handleInputChangeMount,
+        handleSliderChangeMount,
+        handleInputChangeTerm,
+        handleSliderChangeTerm,
+    ] = useForm(initialState);
 
     const [stateDetails, setDetails] = useState(false);
 
@@ -41,7 +48,9 @@ export const SimuladorApp = () => {
                     formValues={formValues}
                     handleCleanInput={handleCleanInput}
                     handleInputChangeMount={handleInputChangeMount}
+                    handleSliderChangeMount={handleSliderChangeMount}
                     handleInputChangeTerm={handleInputChangeTerm}
+                    handleSliderChangeTerm={handleSliderChangeTerm}
                 />
                 <div className="row">
                     <div className="column">

@@ -23,11 +23,29 @@ export const useForm = (initialState) => {
         }
     };
 
+    const handleSliderChangeMount = (mount = 0) => {
+        if (!isNaN(mount)) {
+            setValues({
+                ...values,
+                mount: mount,
+            });
+        }
+    };
+
     const handleInputChangeTerm = ({ target }) => {
         if (!isNaN(target.value)) {
             setValues({
                 ...values,
                 term: target.value,
+            });
+        }
+    };
+
+    const handleSliderChangeTerm = (term = 0) => {
+        if (!isNaN(term)) {
+            setValues({
+                ...values,
+                term: term,
             });
         }
     };
@@ -42,5 +60,12 @@ export const useForm = (initialState) => {
         }
     }, [mount, term]);
 
-    return [values, handleCleanInput, handleInputChangeMount, handleInputChangeTerm];
+    return [
+        values,
+        handleCleanInput,
+        handleInputChangeMount,
+        handleSliderChangeMount,
+        handleInputChangeTerm,
+        handleSliderChangeTerm,
+    ];
 };
